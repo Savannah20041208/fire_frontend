@@ -1,0 +1,342 @@
+.phone-frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  overflow-x: auto;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.phone-frame {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  margin: 0 auto;
+  transform: scale(1.2);
+  transform-origin: center top;
+}
+
+.phone-bezel {
+  background: #1a1a1a;
+  border-radius: 40px;
+  padding: 12px 8px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 2px rgba(255, 255, 255, 0.1) inset,
+    0 0 0 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* 顶部扬声器和摄像头 */
+.phone-speaker {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.phone-camera {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(30px);
+  width: 12px;
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border: 2px solid #2a2a2a;
+  z-index: 10;
+}
+
+/* 屏幕 */
+.phone-screen {
+  background: #000;
+  border-radius: 32px;
+  overflow: hidden;
+  aspect-ratio: 9 / 19.5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+}
+
+/* 状态栏 */
+.phone-status-bar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  height: 44px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* 防止状态栏被压缩 */
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-time {
+  font-weight: 700;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+/* 手机导航栏 */
+.phone-navbar {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  flex-shrink: 0; /* 防止导航栏被压缩 */
+}
+
+.phone-nav-back,
+.phone-nav-menu {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+  color: #333;
+}
+
+.phone-nav-back:hover,
+.phone-nav-menu:hover {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+}
+
+.phone-nav-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+/* 内容区域 */
+.phone-content {
+  flex: 1 1 0;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  position: relative;
+  /* 确保可以滚动 - 关键：flex子元素需要min-height: 0 */
+  min-height: 0;
+  /* 改善滚动性能 */
+  will-change: scroll-position;
+  /* 滚动容器 */
+  scroll-padding-top: 0;
+  scroll-padding-bottom: 0;
+  /* 窄滚动条（Firefox） */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 107, 0.6) rgba(0, 0, 0, 0.05);
+}
+
+/* 滚动条样式 - 窄滚动条，可拖动 */
+.phone-content::-webkit-scrollbar {
+  width: 0.5px;
+}
+
+/* 移除滚动条箭头按钮 */
+.phone-content::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.phone-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5px;
+}
+
+.phone-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 107, 0.6);
+  border-radius: 0.5px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.phone-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 107, 0.8);
+}
+
+.phone-content::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 107, 107, 1);
+}
+
+/* 滚动指示器 */
+.phone-content::before {
+  content: '';
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.phone-content.scrolling::before {
+  opacity: 1;
+}
+
+/* Home指示器 */
+.phone-home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .phone-frame-container {
+    padding: 0;
+  }
+
+  .phone-frame {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .phone-bezel {
+    border-radius: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phone-screen {
+    border-radius: 0;
+    flex: 1;
+    height: 100%;
+  }
+
+  .phone-speaker,
+  .phone-camera {
+    display: none;
+  }
+
+  .phone-home-indicator {
+    display: none;
+  }
+}
+
+/* 手机内容样式重置 */
+.phone-content * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.phone-content .page-header {
+  margin: 0;
+  border-radius: 0;
+  padding: 1.25rem 1rem;
+}
+
+.phone-content .page-header h1 {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
+}
+
+.phone-content .page-header p {
+  font-size: 0.9rem !important;
+}
+
+.phone-content .main-content {
+  max-width: 100%;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+/* 确保内容足够高以产生滚动 */
+.phone-content .mobile-app {
+  min-height: calc(100vh + 200px); /* 确保内容超出屏幕高度 */
+  width: 100%;
+}
+
+.phone-content .navbar {
+  display: none;
+}
+
+.phone-content .footer {
+  display: none;
+}
+
+/* 防止内容溢出 */
+.phone-content img,
+.phone-content svg,
+.phone-content video {
+  max-width: 100%;
+  height: auto;
+}
+
+.phone-content table {
+  width: 100%;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.phone-content pre,
+.phone-content code {
+  overflow-x: auto;
+  word-break: break-word;
+  font-size: 0.85rem;
+}
+

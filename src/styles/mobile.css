@@ -1,0 +1,1319 @@
+/* 移动端全局优化样式 */
+
+/* 手机屏幕基础设置 */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* 移动端页面通用优化 */
+.mobile-app {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.mobile-app * {
+  box-sizing: border-box;
+}
+
+/* 页面头部优化 */
+.mobile-app .page-header {
+  padding: 0.875rem 0.75rem !important;
+  margin: 0 0.75rem 0.75rem 0.75rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  text-align: left !important;
+}
+
+.mobile-app .page-header h1 {
+  font-size: 1.15rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.375rem !important;
+  font-weight: 700 !important;
+}
+
+.mobile-app .page-header p {
+  font-size: 0.8rem !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  color: #666 !important;
+}
+
+/* 卡片优化 */
+.mobile-app .section-card,
+.mobile-app .common-card {
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+  border-radius: 16px !important;
+}
+
+.mobile-app .section-card h3,
+.mobile-app .common-card h3 {
+  font-size: 1.2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* 按钮优化 */
+.mobile-app button,
+.mobile-app .btn {
+  min-height: 44px;
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1rem !important;
+  border-radius: 12px !important;
+}
+
+/* 输入框优化 */
+.mobile-app input,
+.mobile-app textarea {
+  font-size: 16px !important; /* 防止iOS自动缩放 */
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+/* 网格布局优化 */
+.mobile-app .designs-grid,
+.mobile-app .works-grid,
+.mobile-app .pattern-gallery,
+.mobile-app .features-grid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+/* 卡片内容优化 */
+.mobile-app .design-card,
+.mobile-app .work-card,
+.mobile-app .pattern-item {
+  margin-bottom: 1rem !important;
+}
+
+.mobile-app .design-card h3,
+.mobile-app .work-card h4 {
+  font-size: 1.1rem !important;
+}
+
+.mobile-app .design-card p,
+.mobile-app .work-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+/* 流程步骤优化 */
+.mobile-app .flow-step {
+  padding: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.mobile-app .step-icon {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 1.5rem !important;
+}
+
+.mobile-app .step-content h3 {
+  font-size: 1.1rem !important;
+}
+
+.mobile-app .step-content p {
+  font-size: 0.9rem !important;
+}
+
+/* 表单优化 */
+.mobile-app .form-group {
+  margin-bottom: 1.25rem !important;
+}
+
+.mobile-app .form-group label {
+  font-size: 0.9rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* 列表优化 */
+.mobile-app ul,
+.mobile-app ol {
+  padding-left: 1.5rem !important;
+}
+
+.mobile-app li {
+  margin-bottom: 0.5rem !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+/* 表格优化（如果有） */
+.mobile-app table {
+  font-size: 0.85rem !important;
+  width: 100% !important;
+}
+
+.mobile-app th,
+.mobile-app td {
+  padding: 0.5rem !important;
+}
+
+/* 图片优化 */
+.mobile-app img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 文本优化 */
+.mobile-app h1 {
+  font-size: 1.75rem !important;
+  line-height: 1.3 !important;
+}
+
+.mobile-app h2 {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
+}
+
+.mobile-app h3 {
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important;
+}
+
+.mobile-app h4 {
+  font-size: 1.1rem !important;
+  line-height: 1.5 !important;
+}
+
+.mobile-app p {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* 间距优化 */
+.mobile-app .container {
+  padding: 0 1rem !important;
+}
+
+.mobile-app .section {
+  padding: 1.5rem 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* 触摸目标优化 */
+.mobile-app a,
+.mobile-app button,
+.mobile-app [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* AR容器优化 */
+.mobile-app .ar-container {
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .ar-preview {
+  width: 100% !important;
+}
+
+.mobile-app .ar-sidebar {
+  width: 100% !important;
+}
+
+/* 设计工作区优化 */
+.mobile-app .design-workspace {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+/* 用户中心优化 */
+.mobile-app .user-info-card {
+  flex-direction: column !important;
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .user-stats {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .tabs {
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .tab-btn {
+  padding: 0.75rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* 社区页面优化 */
+.mobile-app .featured-card {
+  grid-template-columns: 1fr !important;
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .featured-image {
+  padding-top: 100% !important;
+}
+
+.mobile-app .designers-grid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+/* 文化页面优化 */
+.mobile-app .culture-layout {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .culture-sidebar {
+  position: static !important;
+}
+
+.mobile-app .sidebar-nav {
+  position: static !important;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 0.75rem !important;
+}
+
+.mobile-app .nav-item {
+  white-space: nowrap;
+  padding: 0.75rem 1rem !important;
+}
+
+.mobile-app .timeline {
+  padding-left: 2rem !important;
+}
+
+.mobile-app .timeline-marker {
+  left: -1.5rem !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+/* 滚动优化 */
+.mobile-app {
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+/* 防止水平滚动 */
+.mobile-app * {
+  max-width: 100%;
+}
+
+/* 链接优化 */
+.mobile-app a {
+  color: #ff6b6b;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+/* 代码块优化（如果有） */
+.mobile-app code,
+.mobile-app pre {
+  font-size: 0.85rem !important;
+  overflow-x: auto;
+}
+
+/* 模态框优化（如果有） */
+.mobile-app .modal {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* 工具提示优化 */
+.mobile-app .tooltip {
+  font-size: 0.85rem !important;
+}
+
+/* ========== 产品设计页面优化 ========== */
+.mobile-app .product-design {
+  padding: 0.5rem;
+}
+
+.mobile-app .filter-section {
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-app .filter-buttons {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mobile-app .filter-btn {
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  min-height: 36px;
+}
+
+.mobile-app .design-image-container {
+  padding-top: 120% !important;
+}
+
+.mobile-app .design-overlay {
+  padding: 0.5rem;
+}
+
+.mobile-app .view-btn,
+.mobile-app .ar-btn {
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  min-height: 36px;
+}
+
+.mobile-app .design-info {
+  padding: 1rem !important;
+}
+
+.mobile-app .design-category {
+  font-size: 0.75rem !important;
+  padding: 0.2rem 0.6rem !important;
+}
+
+/* ========== 服务流程页面优化 ========== */
+.mobile-app .service-flow {
+  padding: 0.5rem;
+}
+
+.mobile-app .flow-container {
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .flow-timeline {
+  padding-left: 2rem !important;
+}
+
+.mobile-app .flow-step {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  padding: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.mobile-app .step-connector {
+  margin-right: 0 !important;
+  margin-bottom: 1rem !important;
+  align-items: center;
+}
+
+.mobile-app .connector-line {
+  display: none !important;
+}
+
+.mobile-app .step-icon {
+  width: 55px !important;
+  height: 55px !important;
+  font-size: 1.5rem !important;
+}
+
+.mobile-app .step-content {
+  text-align: center;
+  padding-top: 0 !important;
+}
+
+.mobile-app .step-content h3 {
+  font-size: 1.1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.mobile-app .step-content p {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+.mobile-app .step-details {
+  margin-top: 1rem !important;
+  padding: 1rem !important;
+}
+
+.mobile-app .step-details li {
+  font-size: 0.85rem !important;
+  padding: 0.4rem 0 !important;
+}
+
+.mobile-app .flow-summary {
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .summary-steps {
+  flex-wrap: wrap;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .summary-step {
+  min-width: 80px;
+}
+
+.mobile-app .summary-number {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 1rem !important;
+}
+
+.mobile-app .summary-arrow {
+  font-size: 1.2rem !important;
+}
+
+/* ========== 共创设计页面优化 ========== */
+.mobile-app .co-design {
+  padding: 0.5rem;
+}
+
+.mobile-app .design-workspace {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .workspace-left,
+.mobile-app .workspace-center,
+.mobile-app .workspace-right {
+  width: 100% !important;
+}
+
+.mobile-app .patterns-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .pattern-card {
+  padding: 0.75rem !important;
+}
+
+.mobile-app .pattern-preview {
+  height: 60px !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.mobile-app .pattern-info h4 {
+  font-size: 0.85rem !important;
+}
+
+.mobile-app .pattern-info p {
+  font-size: 0.75rem !important;
+}
+
+.mobile-app .garments-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .garment-type-card {
+  padding: 1rem !important;
+}
+
+.mobile-app .garment-icon {
+  font-size: 2rem !important;
+}
+
+.mobile-app .preview-card {
+  min-height: auto !important;
+}
+
+.mobile-app .design-preview-area {
+  min-height: 300px !important;
+  padding: 1rem !important;
+}
+
+.mobile-app .garment-outline {
+  max-width: 200px !important;
+  height: 250px !important;
+}
+
+.mobile-app .design-tools {
+  gap: 1rem !important;
+}
+
+.mobile-app .color-picker-tool {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .color-option {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.mobile-app .size-selector {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .size-btn {
+  padding: 0.6rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+.mobile-app .action-panel {
+  position: static !important;
+}
+
+.mobile-app .action-buttons {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .action-btn {
+  padding: 0.75rem 1rem !important;
+  font-size: 0.9rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .my-designs {
+  gap: 0.75rem !important;
+}
+
+.mobile-app .design-item {
+  padding: 0.75rem !important;
+}
+
+.mobile-app .design-thumbnail {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+/* ========== AR互动页面优化 ========== */
+.mobile-app .ar-interaction {
+  padding: 0.5rem;
+}
+
+.mobile-app .ar-container {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .ar-preview {
+  padding: 1rem !important;
+}
+
+.mobile-app .ar-viewport {
+  aspect-ratio: 9 / 16 !important;
+}
+
+.mobile-app .ar-controls {
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .control-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .ar-sidebar {
+  width: 100% !important;
+}
+
+.mobile-app .sidebar-section {
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-app .garment-list {
+  gap: 0.75rem !important;
+}
+
+.mobile-app .garment-item {
+  padding: 0.75rem !important;
+}
+
+.mobile-app .garment-thumbnail {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.mobile-app .garment-info h4 {
+  font-size: 0.95rem !important;
+}
+
+.mobile-app .select-btn {
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.8rem !important;
+}
+
+.mobile-app .adjustment-controls {
+  gap: 1rem !important;
+}
+
+.mobile-app .color-picker {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .position-controls {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .pos-btn {
+  width: 35px !important;
+  height: 35px !important;
+  font-size: 1rem !important;
+}
+
+.mobile-app .action-buttons {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .ar-features {
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .features-list {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+/* ========== 社区页面优化 ========== */
+.mobile-app .community {
+  padding: 0.5rem;
+}
+
+.mobile-app .community-tabs {
+  padding: 0.75rem !important;
+  gap: 0.5rem !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-app .community-tab {
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  white-space: nowrap;
+  min-height: 40px;
+}
+
+.mobile-app .community-content {
+  padding: 1rem !important;
+}
+
+.mobile-app .filter-bar {
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-app .filter-tags {
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .filter-tag {
+  padding: 0.5rem 0.8rem !important;
+  font-size: 0.85rem !important;
+}
+
+.mobile-app .upload-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .works-grid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .work-card {
+  margin-bottom: 0 !important;
+}
+
+.mobile-app .work-info {
+  padding: 1rem !important;
+}
+
+.mobile-app .work-title {
+  font-size: 1rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mobile-app .work-stats {
+  font-size: 0.8rem !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .featured-card {
+  grid-template-columns: 1fr !important;
+  padding: 1rem !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .featured-image {
+  padding-top: 100% !important;
+}
+
+.mobile-app .featured-header {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .featured-title {
+  font-size: 1.2rem !important;
+}
+
+.mobile-app .featured-stats {
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .stat-btn {
+  padding: 0.5rem 0.8rem !important;
+  font-size: 0.85rem !important;
+}
+
+.mobile-app .topics-header {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .new-topic-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .topic-card {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 1rem !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .topic-icon {
+  font-size: 2rem !important;
+}
+
+.mobile-app .topic-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .discussion-item {
+  padding: 1rem !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .discussion-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 1.2rem !important;
+}
+
+.mobile-app .discussion-text {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+.mobile-app .discussion-actions {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .discussion-btn {
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.8rem !important;
+}
+
+.mobile-app .designers-grid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .designer-card {
+  padding: 1.5rem 1rem !important;
+}
+
+.mobile-app .designer-avatar-large {
+  width: 80px !important;
+  height: 80px !important;
+  font-size: 2.5rem !important;
+}
+
+.mobile-app .designer-stats {
+  gap: 0.5rem !important;
+}
+
+.mobile-app .designer-stat .stat-value {
+  font-size: 1.3rem !important;
+}
+
+/* ========== 文化知识页面优化 ========== */
+.mobile-app .culture {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.mobile-app .culture > * {
+  box-sizing: border-box;
+}
+
+.mobile-app .culture-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;
+  gap: 0.75rem !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mobile-app .culture-sidebar {
+  order: 2 !important;
+  width: 100% !important;
+  padding: 0 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-app .culture-main {
+  order: 1 !important;
+  width: 100% !important;
+  gap: 0.75rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-app .sidebar-nav {
+  position: static !important;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem !important;
+  gap: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 12px !important;
+  margin-bottom: 0.75rem;
+}
+
+.mobile-app .sidebar-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-app .nav-item {
+  white-space: nowrap;
+  padding: 0.75rem 1rem !important;
+  min-width: auto;
+  min-height: 44px;
+  flex-shrink: 0;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+}
+
+.mobile-app .nav-icon {
+  font-size: 1.2rem !important;
+}
+
+.mobile-app .nav-title {
+  font-size: 0.9rem !important;
+}
+
+.mobile-app .pattern-quickview {
+  padding: 0.875rem !important;
+  border-radius: 12px !important;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mobile-app .pattern-quickview h3 {
+  font-size: 1.1rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mobile-app .quickview-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .quickview-item {
+  min-width: 0;
+}
+
+.mobile-app .quickview-pattern {
+  border-radius: 8px !important;
+}
+
+.mobile-app .quickview-name {
+  font-size: 0.75rem !important;
+  word-break: break-word;
+}
+
+.mobile-app .culture-content {
+  padding: 1rem 0.75rem !important;
+  border-radius: 12px !important;
+  margin: 0 0.75rem 0.75rem 0.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+.mobile-app .content-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.625rem !important;
+  padding-bottom: 0.625rem !important;
+  margin-bottom: 0.625rem !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.mobile-app .header-icon {
+  font-size: 1.5rem !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+
+.mobile-app .content-header h2 {
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.mobile-app .content-body {
+  line-height: 1.6 !important;
+  width: 100% !important;
+}
+
+.mobile-app .content-paragraph {
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
+  text-indent: 1.2em !important;
+  margin-bottom: 0.75rem !important;
+  color: #555 !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto;
+  text-align: justify;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.mobile-app .pattern-gallery-section {
+  padding: 1rem 0.75rem !important;
+  border-radius: 12px !important;
+  margin: 0 0.75rem 0.75rem 0.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+.mobile-app .gallery-title {
+  font-size: 1rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.3 !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.mobile-app .pattern-gallery {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .pattern-item {
+  padding: 1rem !important;
+  border-radius: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.mobile-app .pattern-display {
+  margin-bottom: 0.75rem !important;
+  border-radius: 10px !important;
+}
+
+.mobile-app .pattern-info {
+  text-align: center !important;
+}
+
+.mobile-app .pattern-cat {
+  font-size: 0.7rem !important;
+  padding: 0.25rem 0.6rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.mobile-app .pattern-info h4 {
+  font-size: 0.95rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.mobile-app .pattern-info p {
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+.mobile-app .timeline-section {
+  padding: 1rem 0.75rem !important;
+  border-radius: 12px !important;
+  margin: 0 0.75rem 0.75rem 0.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+.mobile-app .timeline-title {
+  font-size: 1rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.mobile-app .timeline {
+  padding-left: 1.5rem !important;
+}
+
+.mobile-app .timeline::before {
+  left: 8px !important;
+  width: 2px !important;
+}
+
+.mobile-app .timeline-item {
+  margin-bottom: 1.5rem !important;
+}
+
+.mobile-app .timeline-marker {
+  left: -1rem !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-width: 3px !important;
+}
+
+.mobile-app .timeline-content {
+  padding: 1rem !important;
+  border-radius: 12px !important;
+}
+
+.mobile-app .timeline-content h3 {
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.mobile-app .timeline-content p {
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.mobile-app .timeline-date {
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.6rem !important;
+}
+
+/* ========== 用户中心页面优化 ========== */
+.mobile-app .user-center {
+  padding: 0.5rem;
+}
+
+.mobile-app .user-info-card {
+  flex-direction: column !important;
+  padding: 1.5rem 1rem !important;
+  text-align: center;
+}
+
+.mobile-app .user-avatar {
+  margin-bottom: 1rem;
+}
+
+.mobile-app .avatar-circle {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 2.5rem !important;
+}
+
+.mobile-app .user-details h2 {
+  font-size: 1.5rem !important;
+}
+
+.mobile-app .user-level {
+  font-size: 0.85rem !important;
+  padding: 0.4rem 0.8rem !important;
+}
+
+.mobile-app .user-stats {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .stat-item {
+  padding: 0.75rem !important;
+}
+
+.mobile-app .stat-value {
+  font-size: 1.5rem !important;
+}
+
+.mobile-app .stat-label {
+  font-size: 0.8rem !important;
+}
+
+.mobile-app .tabs-container {
+  padding: 0.75rem !important;
+}
+
+.mobile-app .tabs {
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  justify-content: center;
+}
+
+.mobile-app .tab-btn {
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  min-height: 40px;
+}
+
+.mobile-app .content-area {
+  padding: 1rem !important;
+}
+
+.mobile-app .form-section {
+  margin-bottom: 1.5rem !important;
+}
+
+.mobile-app .form-section h3 {
+  font-size: 1.1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mobile-app .save-btn {
+  width: 100% !important;
+  padding: 0.875rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .security-item {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+  padding: 1rem !important;
+}
+
+.mobile-app .security-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .designs-header,
+.mobile-app .orders-header,
+.mobile-app .favorites-header {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .new-design-btn {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  min-height: 44px;
+}
+
+.mobile-app .design-card,
+.mobile-app .order-card,
+.mobile-app .favorite-card {
+  flex-direction: column !important;
+  padding: 1rem !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .design-image,
+.mobile-app .product-thumbnail,
+.mobile-app .favorite-image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1;
+}
+
+.mobile-app .design-card-info,
+.mobile-app .product-info,
+.mobile-app .favorite-info {
+  width: 100% !important;
+}
+
+.mobile-app .design-card-info h4,
+.mobile-app .product-info h4,
+.mobile-app .favorite-info h4 {
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.mobile-app .design-actions {
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+  width: 100%;
+}
+
+.mobile-app .action-btn {
+  padding: 0.5rem 0.8rem !important;
+  font-size: 0.85rem !important;
+  flex: 1;
+  min-width: 80px;
+  min-height: 36px;
+}
+
+.mobile-app .order-header {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .order-body {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 1rem !important;
+}
+
+.mobile-app .order-product {
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .order-actions {
+  width: 100% !important;
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .order-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  min-height: 36px;
+}
+
+.mobile-app .favorite-meta {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+}
+
+.mobile-app .favorite-actions {
+  width: 100% !important;
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+}
+
+.mobile-app .favorite-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  min-height: 36px;
+}
+
