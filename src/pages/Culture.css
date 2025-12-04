@@ -100,6 +100,16 @@
 
 .quickview-item {
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.quickview-item:hover {
+  transform: translateY(-3px);
+}
+
+.quickview-item:hover .quickview-img {
+  transform: scale(1.08);
 }
 
 .quickview-pattern {
@@ -107,10 +117,17 @@
   aspect-ratio: 1;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.quickview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .mini-flame {
@@ -220,11 +237,22 @@
   width: 100%;
   aspect-ratio: 1;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.pattern-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pattern-item:hover .pattern-img {
+  transform: scale(1.05);
 }
 
 .pattern-visual {

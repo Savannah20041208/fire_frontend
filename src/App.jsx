@@ -9,6 +9,7 @@ import UserCenter from './pages/UserCenter'
 import Community from './pages/Community'
 import Culture from './pages/Culture'
 import MobileView from './pages/MobileView'
+import logo from './assets/logo.jpg'
 import './App.css'
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
           <div className="app">
             <nav className="navbar">
               <div className="nav-container">
-                <div className="nav-logo">
+                <Link to="/" className="nav-logo">
+                  <img src={logo} alt="彝族火焰纹Logo" className="logo-image" />
                   <h1>彝族火焰纹 AR 共创平台</h1>
-                </div>
+                </Link>
                 <ul className="nav-menu">
                   <li><Link to="/">首页</Link></li>
                   <li><Link to="/product">产品设计</Link></li>

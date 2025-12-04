@@ -2,7 +2,7 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #ffffff;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -12,6 +12,38 @@
   position: relative;
   /* 确保内容足够高以产生滚动 */
   padding-bottom: 120px;
+}
+
+.mobile-app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(255, 87, 34, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 152, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(244, 67, 54, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 60% 20%, rgba(255, 111, 0, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(230, 74, 25, 0.07) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+  animation: flameFlicker 8s ease-in-out infinite;
+}
+
+.mobile-app::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(255, 87, 34, 0.02) 100px, rgba(255, 87, 34, 0.02) 200px),
+    repeating-linear-gradient(-45deg, transparent, transparent 150px, rgba(255, 152, 0, 0.015) 150px, rgba(255, 152, 0, 0.015) 250px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .mobile-back-btn {
@@ -25,6 +57,8 @@
   -webkit-tap-highlight-color: rgba(255, 107, 107, 0.2);
   touch-action: manipulation;
   user-select: none;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-back-btn:active {
@@ -37,9 +71,11 @@
   flex: 1;
   padding: 1rem;
   padding-bottom: 90px;
-  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
+  background: transparent;
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-hero {
@@ -67,6 +103,27 @@
   height: 200%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
+}
+
+.mobile-hero-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.4));
+  animation: floatMobile 3s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatMobile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .mobile-title {
@@ -337,7 +394,7 @@
   padding: 8px 0;
   padding-bottom: max(8px, env(safe-area-inset-bottom));
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-  z-index: 100;
+  z-index: 200;
 }
 
 .mobile-bottom-nav .nav-item {
@@ -389,6 +446,8 @@
   border-radius: 0;
   padding: 1.25rem 1rem;
   margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-app .section-card,
@@ -398,6 +457,8 @@
   margin-bottom: 0.75rem;
   padding: 1rem;
   border-radius: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-app .designs-grid,
@@ -415,33 +476,23 @@
 
 /* 滚动优化 - 这部分已合并到上面 */
 
-/* 滚动提示（顶部和底部） */
-.mobile-app::before,
-.mobile-app::after {
-  content: '';
-  position: sticky;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background: linear-gradient(180deg, rgba(245, 247, 250, 0.8), transparent);
-  pointer-events: none;
-  z-index: 5;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.mobile-app::before {
-  top: 0;
-}
-
-.mobile-app::after {
-  bottom: 0;
-  background: linear-gradient(0deg, rgba(245, 247, 250, 0.8), transparent);
-}
-
-.mobile-app.scroll-top::before,
-.mobile-app.scroll-bottom::after {
-  opacity: 1;
+@keyframes flameFlicker {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(0.98);
+  }
+  75% {
+    opacity: 0.92;
+    transform: scale(1.01);
+  }
 }
 
 /* 触摸优化 */

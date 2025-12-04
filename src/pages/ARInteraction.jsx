@@ -1,7 +1,22 @@
 import React from 'react'
+import design1 from '../assets/design1.jpg'
+import design2 from '../assets/design2.jpg'
+import design3 from '../assets/design3.jpg'
+import design4 from '../assets/design4.jpg'
+import design5 from '../assets/design5.jpg'
+import design6 from '../assets/design6.jpg'
 import './ARInteraction.css'
 
 function ARInteraction() {
+  const garments = [
+    { id: 1, title: '火焰纹传统服饰', category: '传统系列', image: design1 },
+    { id: 2, title: '现代火焰纹T恤', category: '现代系列', image: design2 },
+    { id: 3, title: '火焰纹连衣裙', category: '时尚系列', image: design3 },
+    { id: 4, title: '火焰纹斗篷', category: '配饰系列', image: design4 },
+    { id: 5, title: 'AR数字服饰', category: '数字系列', image: design5 },
+    { id: 6, title: '火焰纹手提包', category: '定制系列', image: design6 }
+  ]
+
   return (
     <div className="ar-interaction">
       <div className="page-header">
@@ -29,25 +44,14 @@ function ARInteraction() {
           <div className="sidebar-section">
             <h3>选择服饰</h3>
             <div className="garment-list">
-              {[1, 2, 3, 4].map(id => (
-                <div key={id} className="garment-item">
+              {garments.map(garment => (
+                <div key={garment.id} className="garment-item">
                   <div className="garment-thumbnail">
-                    <div className="flame-pattern-small">
-                      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50,90 Q40,75 45,60 Q50,50 55,40 Q60,30 50,20 Q40,25 35,35 Q30,45 25,55 Q20,65 25,75 Q30,85 50,90 Z" 
-                              fill="url(#flameGradSmall)" opacity="0.8"/>
-                        <defs>
-                          <linearGradient id={`flameGradSmall${id}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#ff6b6b" />
-                            <stop offset="50%" stopColor="#ff8e53" />
-                            <stop offset="100%" stopColor="#ff6b6b" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </div>
+                    <img src={garment.image} alt={garment.title} className="garment-image" />
                   </div>
                   <div className="garment-info">
-                    <h4>火焰纹服饰 {id}</h4>
+                    <h4>{garment.title}</h4>
+                    <span className="garment-category">{garment.category}</span>
                     <button className="select-btn">选择</button>
                   </div>
                 </div>
@@ -100,24 +104,32 @@ function ARInteraction() {
         <h2>AR 功能特点</h2>
         <div className="features-list">
           <div className="feature-item">
-            <div className="feature-icon">🎯</div>
-            <h4>实时预览</h4>
-            <p>即时查看服饰上身效果，无需等待</p>
+            <div className="feature-header">
+              <div className="feature-icon">🎯</div>
+              <h4>实时预览</h4>
+            </div>
+            <p>即时查看服饰上身效果</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">🎨</div>
-            <h4>个性化定制</h4>
-            <p>调整颜色、尺寸等参数，找到最适合的样式</p>
+            <div className="feature-header">
+              <div className="feature-icon">🎨</div>
+              <h4>个性化定制</h4>
+            </div>
+            <p>调整颜色、尺寸等参数</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">📸</div>
-            <h4>拍照分享</h4>
-            <p>保存试穿效果，分享到社区</p>
+            <div className="feature-header">
+              <div className="feature-icon">📸</div>
+              <h4>拍照分享</h4>
+            </div>
+            <p>保存试穿效果，分享社区</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">🌐</div>
-            <h4>跨平台支持</h4>
-            <p>支持手机、平板等多种设备</p>
+            <div className="feature-header">
+              <div className="feature-icon">🌐</div>
+              <h4>跨平台支持</h4>
+            </div>
+            <p>支持手机、平板等设备</p>
           </div>
         </div>
       </div>

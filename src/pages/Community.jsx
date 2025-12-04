@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import design1 from '../assets/design1.jpg'
+import design2 from '../assets/design2.jpg'
+import design3 from '../assets/design3.jpg'
+import design4 from '../assets/design4.jpg'
+import design5 from '../assets/design5.jpg'
+import design6 from '../assets/design6.jpg'
 import './Community.css'
 
 function Community() {
@@ -14,7 +20,7 @@ function Community() {
       likes: 256,
       comments: 42,
       views: 1280,
-      image: 'featured1',
+      image: design1,
       tags: ['传统', '现代', '热门']
     },
     {
@@ -25,7 +31,7 @@ function Community() {
       likes: 189,
       comments: 35,
       views: 980,
-      image: 'featured2',
+      image: design2,
       tags: ['AR', '数字', '创新']
     },
     {
@@ -36,7 +42,7 @@ function Community() {
       likes: 312,
       comments: 58,
       views: 1560,
-      image: 'featured3',
+      image: design3,
       tags: ['几何', '简约', '热门']
     }
   ]
@@ -51,7 +57,7 @@ function Community() {
       likes: 45,
       comments: 8,
       date: '2小时前',
-      image: 'work1'
+      image: design1
     },
     {
       id: 2,
@@ -61,7 +67,7 @@ function Community() {
       likes: 67,
       comments: 12,
       date: '5小时前',
-      image: 'work2'
+      image: design2
     },
     {
       id: 3,
@@ -71,7 +77,7 @@ function Community() {
       likes: 34,
       comments: 6,
       date: '1天前',
-      image: 'work3'
+      image: design3
     },
     {
       id: 4,
@@ -81,7 +87,7 @@ function Community() {
       likes: 89,
       comments: 15,
       date: '1天前',
-      image: 'work4'
+      image: design4
     },
     {
       id: 5,
@@ -91,7 +97,7 @@ function Community() {
       likes: 123,
       comments: 23,
       date: '2天前',
-      image: 'work5'
+      image: design5
     },
     {
       id: 6,
@@ -101,7 +107,7 @@ function Community() {
       likes: 56,
       comments: 9,
       date: '2天前',
-      image: 'work6'
+      image: design6
     }
   ]
 
@@ -169,11 +175,9 @@ function Community() {
               {latestWorks.map(work => (
                 <div key={work.id} className="work-card">
                   <div className="work-image">
-                    <div className="work-placeholder">
-                      <div className="flame-pattern-work"></div>
-                    </div>
+                    <img src={work.image} alt={work.title} className="work-img" />
                     <div className="work-overlay">
-                      <button className="view-btn">👁️ {work.views}</button>
+                      <button className="view-btn">👁️ 查看</button>
                     </div>
                   </div>
                   <div className="work-info">
@@ -201,9 +205,7 @@ function Community() {
               {featuredWorks.map(work => (
                 <div key={work.id} className="featured-card">
                   <div className="featured-image">
-                    <div className="featured-placeholder">
-                      <div className="flame-pattern-featured"></div>
-                    </div>
+                    <img src={work.image} alt={work.title} className="featured-img" />
                     <div className="featured-badge">⭐ 精选</div>
                   </div>
                   <div className="featured-content">

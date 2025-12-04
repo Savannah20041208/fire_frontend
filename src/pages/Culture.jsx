@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import fireClassic from '../assets/fire-classic.jpg'
+import fireGeometric from '../assets/fire-geometric.jpg'
+import fireComposite from '../assets/fire-composite.jpg'
+import fireAbstract from '../assets/fire-abstract.jpg'
+import fireSimple from '../assets/fire-simple.jpg'
+import fireModern from '../assets/fire-modern.jpg'
 import './Culture.css'
 
 function Culture() {
@@ -64,12 +70,12 @@ function Culture() {
   ]
 
   const patternGallery = [
-    { id: 1, name: '经典火焰纹', category: '火焰纹', description: '传统经典的火焰纹样，流畅的曲线体现动感' },
-    { id: 2, name: '几何火焰纹', category: '几何纹', description: '几何化处理的火焰纹，更具现代感' },
-    { id: 3, name: '复合火焰纹', category: '复合纹', description: '多种元素组合的火焰纹样' },
-    { id: 4, name: '抽象火焰纹', category: '抽象纹', description: '抽象艺术风格的火焰纹' },
-    { id: 5, name: '简约火焰纹', category: '简约纹', description: '简化设计的火焰纹样' },
-    { id: 6, name: '现代火焰纹', category: '现代纹', description: '现代演绎的火焰纹样' }
+    { id: 1, name: '经典火焰纹', category: '传统', description: '传统经典的火焰纹样，流畅的曲线体现动感', image: fireClassic },
+    { id: 2, name: '几何火焰纹', category: '几何', description: '几何化处理的火焰纹，更具现代感', image: fireGeometric },
+    { id: 3, name: '复合火焰纹', category: '复合', description: '多种元素组合的火焰纹样', image: fireComposite },
+    { id: 4, name: '抽象火焰纹', category: '抽象', description: '抽象艺术风格的火焰纹', image: fireAbstract },
+    { id: 5, name: '简约火焰纹', category: '简约', description: '简化设计的火焰纹样', image: fireSimple },
+    { id: 6, name: '现代火焰纹', category: '现代', description: '现代演绎的火焰纹样', image: fireModern }
   ]
 
   return (
@@ -102,7 +108,7 @@ function Culture() {
               {patternGallery.slice(0, 4).map(pattern => (
                 <div key={pattern.id} className="quickview-item">
                   <div className="quickview-pattern">
-                    <div className="mini-flame"></div>
+                    <img src={pattern.image} alt={pattern.name} className="quickview-img" />
                   </div>
                   <span className="quickview-name">{pattern.name}</span>
                 </div>
@@ -137,21 +143,7 @@ function Culture() {
               {patternGallery.map(pattern => (
                 <div key={pattern.id} className="pattern-item">
                   <div className="pattern-display">
-                    <div className="pattern-visual">
-                      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M100,180 Q80,150 90,120 Q100,100 110,80 Q120,60 100,40 Q80,50 70,70 Q60,90 50,110 Q40,130 50,150 Q60,170 100,180 Z" 
-                              fill="url(#cultureFlame)" opacity="0.8"/>
-                        <path d="M100,170 Q85,145 92,115 Q100,95 108,75 Q115,55 100,35 Q85,45 77,62 Q68,80 60,100 Q52,120 60,140 Q68,160 100,170 Z" 
-                              fill="url(#cultureFlame)" opacity="0.6"/>
-                        <defs>
-                          <linearGradient id="cultureFlame" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#ff6b6b" />
-                            <stop offset="50%" stopColor="#ff8e53" />
-                            <stop offset="100%" stopColor="#ff6b6b" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </div>
+                    <img src={pattern.image} alt={pattern.name} className="pattern-img" />
                   </div>
                   <div className="pattern-info">
                     <span className="pattern-cat">{pattern.category}</span>

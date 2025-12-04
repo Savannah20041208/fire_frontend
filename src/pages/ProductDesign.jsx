@@ -1,50 +1,56 @@
 import React from 'react'
+import design1 from '../assets/design1.jpg'
+import design2 from '../assets/design2.jpg'
+import design3 from '../assets/design3.jpg'
+import design4 from '../assets/design4.jpg'
+import design5 from '../assets/design5.jpg'
+import design6 from '../assets/design6.jpg'
 import './ProductDesign.css'
 
 function ProductDesign() {
-  // 模拟产品设计图数据
+  // 产品设计图数据
   const designs = [
     {
       id: 1,
       title: '火焰纹传统服饰',
       description: '融合经典彝族火焰纹样的传统服饰设计',
       category: '传统系列',
-      image: '/api/placeholder/400/500'
+      image: design1
     },
     {
       id: 2,
       title: '现代火焰纹T恤',
       description: '将火焰纹元素融入现代T恤设计',
       category: '现代系列',
-      image: '/api/placeholder/400/500'
+      image: design2
     },
     {
       id: 3,
       title: '火焰纹连衣裙',
       description: '优雅的连衣裙设计，火焰纹点缀',
       category: '时尚系列',
-      image: '/api/placeholder/400/500'
+      image: design3
     },
     {
       id: 4,
-      title: '火焰纹配饰',
-      description: '精美配饰设计，展现火焰纹细节',
+      title: '火焰纹斗篷',
+      description: '精美斗篷设计，展现火焰纹细节',
       category: '配饰系列',
-      image: '/api/placeholder/400/500'
+      image: design4
     },
     {
       id: 5,
       title: 'AR数字服饰',
       description: '专为AR体验设计的虚拟服饰',
       category: '数字系列',
-      image: '/api/placeholder/400/500'
+      image: design5
     },
     {
       id: 6,
-      title: '火焰纹定制款',
-      description: '个性化定制服饰设计',
+      title: '火焰纹手提包',
+      description: '个性化定制手提包设计',
       category: '定制系列',
-      image: '/api/placeholder/400/500'
+      image: design6
     }
   ]
 
@@ -70,22 +76,7 @@ function ProductDesign() {
           <div key={design.id} className="design-card">
             <div className="design-image-container">
               <div className="design-image">
-                <div className="placeholder-image">
-                  <div className="flame-pattern">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M100,180 Q80,150 90,120 Q100,100 110,80 Q120,60 100,40 Q80,50 70,70 Q60,90 50,110 Q40,130 50,150 Q60,170 100,180 Z" 
-                            fill="url(#flameGradient)" opacity="0.8"/>
-                      <defs>
-                        <linearGradient id="flameGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="#ff6b6b" />
-                          <stop offset="50%" stopColor="#ff8e53" />
-                          <stop offset="100%" stopColor="#ff6b6b" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span className="image-label">设计图 {design.id}</span>
-                </div>
+                <img src={design.image} alt={design.title} className="product-image" />
               </div>
               <div className="design-overlay">
                 <button className="view-btn">查看详情</button>

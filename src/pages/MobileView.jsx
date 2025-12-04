@@ -9,6 +9,7 @@ import Community from './Community'
 import Culture from './Culture'
 import UserCenter from './UserCenter'
 import { getSwipeDirection } from '../utils/touchUtils'
+import logo from '../assets/logo.jpg'
 import './MobileView.css'
 
 function MobileView() {
@@ -209,6 +210,7 @@ function MobileHome() {
   return (
     <div className="mobile-home">
       <div className="mobile-hero">
+        <img src={logo} alt="彝族火焰纹Logo" className="mobile-hero-logo" />
         <h1 className="mobile-title">彝族火焰纹 AR 共创平台</h1>
         <p className="mobile-subtitle">融合传统与现代的数字服饰共创体验</p>
       </div>

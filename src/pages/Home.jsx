@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.jpg'
 import './Home.css'
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div className="home">
       <div className="hero-section">
         <div className="hero-content">
+          <img src={logo} alt="彝族火焰纹Logo" className="hero-logo" />
           <h1 className="hero-title">彝族火焰纹与 AR 互动数字服饰共创平台</h1>
           <p className="hero-subtitle">
             融合传统彝族文化精髓与现代AR技术，打造独特的数字服饰共创体验
@@ -24,33 +26,45 @@ function Home() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">🎨</div>
-              <h3>传统纹样数字化</h3>
-              <p>将彝族火焰纹等传统图案进行数字化处理，保留文化精髓</p>
+              <div className="feature-content">
+                <h3>传统纹样数字化</h3>
+                <p>将彝族火焰纹等传统图案进行数字化处理，保留文化精髓</p>
+              </div>
             </div>
             <div className="feature-card">
               <div className="feature-icon">👗</div>
-              <h3>个性化设计</h3>
-              <p>用户可参与服饰设计，打造专属数字服饰作品</p>
+              <div className="feature-content">
+                <h3>个性化设计</h3>
+                <p>用户可参与服饰设计，打造专属数字服饰作品</p>
+              </div>
             </div>
             <div className="feature-card">
               <div className="feature-icon">📱</div>
-              <h3>AR试穿体验</h3>
-              <p>通过AR技术实时预览虚拟服饰上身效果</p>
+              <div className="feature-content">
+                <h3>AR试穿体验</h3>
+                <p>通过AR技术实时预览虚拟服饰上身效果</p>
+              </div>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🤝</div>
-              <h3>共创平台</h3>
-              <p>设计师、用户共同参与，形成创意生态圈</p>
+              <div className="feature-content">
+                <h3>共创平台</h3>
+                <p>设计师、用户共同参与，形成创意生态圈</p>
+              </div>
             </div>
             <div className="feature-card">
               <div className="feature-icon">💬</div>
-              <h3>社区互动</h3>
-              <p>分享作品，交流设计，共同探索彝族文化</p>
+              <div className="feature-content">
+                <h3>社区互动</h3>
+                <p>分享作品，交流设计，共同探索彝族文化</p>
+              </div>
             </div>
             <div className="feature-card">
               <div className="feature-icon">📚</div>
-              <h3>文化传承</h3>
-              <p>深入了解彝族文化和火焰纹的深厚内涵</p>
+              <div className="feature-content">
+                <h3>文化传承</h3>
+                <p>深入了解彝族文化和火焰纹的深厚内涵</p>
+              </div>
             </div>
           </div>
         </div>
